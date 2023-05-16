@@ -1,0 +1,17 @@
+.h1, #maintxt{
+    text-align: center
+}
+.banner{
+    align-items: center;
+}
+/* body{
+    background-color: black;
+} */
+
+.maintxt{
+    margin-left: center;
+    margin-top: center;
+    font-size: 20px;
+    font-family: Montserrat, bold;
+    
+}
