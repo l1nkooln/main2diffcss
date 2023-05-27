@@ -45,6 +45,7 @@ from datetime import datetime, timedelta
 from time import sleep
 import sqlite3
 
+
 clickIdTimes = {}
 promocode = ['mafia', 'l1nkooln']
 
@@ -183,6 +184,8 @@ def main(message):
             bot.send_message(message.chat.id, '📬Меню запису', reply_markup=markup)
 
         elif message.text == '⏰Записатися на хімчистку':
+            a = telebot.types.ReplyKeyboardRemove()
+            bot.send_message(message.from_user.id, 'Что', reply_markup=a)
             if not checkClick(chat_id, clickIdTimes, 30*60):
                 bot.send_message(chat_id, "📌Ви вже записалися \n Спробуйте пізніше")
                 return
@@ -261,6 +264,9 @@ def regist_4(message):
         promo = '-'
 
     bot.send_message(message.chat.id,"🗓Дякую, ваша заявка прийнята і буде передана спеціалістам. Очікуйте дзвінка")
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    bot.send_message(message.chat.id, f'<b>Привіт {message.from_user.first_name}👋!</b> <b>Що бажаєш обрати?</b>',
+        parse_mode='html', reply_markup=markup)
     bot.send_message(admin_id, f"📍Нова заявка: \n Нік юзера: {message.from_user.username} \n ПІБ: {user_name}\n Номер телефону: {user_phone} \n Кузов т/з: {kyzov} \n Промокод: {promo}")
 
 
