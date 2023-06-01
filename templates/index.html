@@ -33,7 +33,7 @@
                       <a class="nav-link" href="{{ url_for('service') }}">Послуги</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#galerai">Галерея робіт</a>
+                        <a class="nav-link" href="#photo">Галерея робіт</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#zapis">Запис</a>
@@ -49,7 +49,7 @@
     
     <main class="mt-5 pt-5">
       
-      <div class="container text-center">
+      <div class="container text-center" id="main">
         <p class="maintxt" href="#golov">Люксова Хімчистка Львова</p>
         <p class="smalltxt">since.2022</p>
       </div>
@@ -97,7 +97,7 @@
           </div>
         </div>
     <div class="galerai"></div>
-    <div class="container text-center mt-5 pt-5">
+    <div class="container text-center mt-5 pt-5", id="photo">
       <p class="maintxt" href="galphoto">Галерея робіт</p>
     </div>  
 
@@ -144,7 +144,7 @@
 
       <p class="maintxt">Підписуйся на наш інстаграм  ≧◠‿◠≦✌</p>
       <img src="{{ url_for('static', filename='banner.png')}}" class="d-block w-100" alt="...">
-      <a href="https://www.instagram.com/masson_studio_/">Лінк тиць</a>
+      <a href="https://www.instagram.com/masson_studio_/" id="zapis">Лінк тиць</a>
 
     </div>
 
@@ -166,10 +166,9 @@
     <div class="container text-center mt-5 pt-5">
       <p class="maintxt">Або через телеграм :)</p>
       <a href="https://t.me/MassonStudio_Bot">Лінк тиць</a>
-
     </div>
 
-    <div class="container text-center mt-5 pt-5">
+    <div class="container text-center mt-5 pt-5", id="location">
       <p class="maintxt" href="location">Де ми знаходимось?</p>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d937.0482616820279!2d24.034024759559678!3d49.855528166005406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add0586c0270b%3A0x6c09e8ac40a51636!2z0YPQuy4g0JbQvtC70LrQvtCy0YHQutCw0Y8sIDE0LCDQm9GM0LLQvtCyLCDQm9GM0LLQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDc5MDAw!5e1!3m2!1sru!2sua!4v1685106047988!5m2!1sru!2sua" width="340" height="300" style="border:2;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
