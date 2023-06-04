@@ -32,9 +32,9 @@ def index():
 def service():
     return render_template("service.html")
 
-if __name__ == "__main__":
-    app.config['TEMPLATES_AUTO_RELOAD'] = True
-    app.run(port=5001, debug=True) # Запускаємо веб-сервер з цього файлу
+# if __name__ == "__main__":
+#     app.config['TEMPLATES_AUTO_RELOAD'] = True
+#     app.run(port=5001, debug=True) # Запускаємо веб-сервер з цього файлу
 
 # with app.app_context():
 #     db.create_all()
