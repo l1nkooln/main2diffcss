@@ -266,6 +266,6 @@ def regist_4(message):
     bot.send_message(admin_id, f"📍Нова заявка: \n Нік юзера: {message.from_user.username} \n ПІБ: {user_name}\n Номер телефону: {user_phone} \n Кузов т/з: {kyzov} \n Промокод: {promo}")
 
 
-if __name__ == '__main__':
-    bot.polling(none_stop=True, interval=0)
+# if __name__ == '__main__':
+#     bot.polling(none_stop=True, interval=0)
 
