@@ -16,7 +16,7 @@ db.init_app(app)
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(50), unique=False, nullable=False)
+    username = db.Column(db.String(50), nullable=False)
     number = db.Column(db.String(50))
 
 @app.route("/", methods = ["POST", "GET"]) # Вказуємо url-адресу для виклику функції
@@ -32,9 +32,9 @@ def index():
 def service():
     return render_template("service.html")
 
-# if __name__ == "__main__":
-#     app.config['TEMPLATES_AUTO_RELOAD'] = True
-#     app.run(port=5001, debug=True) # Запускаємо веб-сервер з цього файлу
+if __name__ == "__main__":
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
+    app.run(port=5001, debug=True) # Запускаємо веб-сервер з цього файлу
 
 # with app.app_context():
 #     db.create_all()
